@@ -1,6 +1,5 @@
-// Main entry point for the Flutter application
-
 import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,18 +9,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'My Flutter App',
+      title: 'چی بپزم - Recipe App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        useMaterial3: true,
+        fontFamily: 'Your-Persian-Font', // Update with actual font name
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to My Flutter App'),
-        ),
-        body: Center(
-          child: Text('Hello, World!'),
-        ),
-      ),
+      home: HomeScreen(),
     );
   }
 }
+
+// Make sure to add your HomeScreen implementation in the home_screen.dart file.
